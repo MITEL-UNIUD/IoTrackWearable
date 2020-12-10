@@ -19,7 +19,7 @@ The IoT device implements fall detection and geofencing.
 - a file containing the Decoder function for The Things Network (**DecoderFunctionTTN.txt**).
 
 ## How to do?
-After installed [Keil $\mu$Vision5](http://www2.keil.com/mdk5/uvision/), double click on **Lora.uvprojx** located in *LGT-92_-LoRa_GPS_Tracker-master\Projects\Multi\Applications\LoRa\DRAGINO-LRWAN(AT)\MDK-ARM\STM32L072CZ-Nucleo*. 
+After installed [Keil uVision5](http://www2.keil.com/mdk5/uvision/), double click on **Lora.uvprojx** located in *LGT-92_-LoRa_GPS_Tracker-master\Projects\Multi\Applications\LoRa\DRAGINO-LRWAN(AT)\MDK-ARM\STM32L072CZ-Nucleo*. 
 
 Now you can analyse and edit the source code!
 
