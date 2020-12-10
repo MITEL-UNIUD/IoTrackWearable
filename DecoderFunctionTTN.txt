@@ -1,0 +1,78 @@
+function Decoder(bytes, port) {
+  // Decode an uplink message from a buffer
+  // (array) of bytes to an object of fields.
+  //var decoded = {};
+  var battery = (bytes[2]);
+ 
+  var gpsfixstatus = (bytes[1] >> 6);
+  switch (gpsfixstatus) {
+    case (2):
+      gpsfixstatus = '3d';
+      break;
+    case (1):
+      gpsfixstatus = '1d';
+      break;
+    default:
+      gpsfixstatus = '0';
+  }
+ 
+  var reporttype = (bytes[1] & 63);
+  switch (reporttype) {
+    case (2):
+      reporttype = '2:Periodic Mode';
+      break;
+    case (4):
+      reporttype = '4:Motion mode static report';
+      break;
+    case (5):
+      reporttype = '5:Motion mode moving report';
+      break;
+    case (6):
+      reporttype = '6:Motion mode static to moving report';
+      break;
+    case (7):
+      reporttype = '7:Motion mode moving to static report';
+      break;
+    case (14):
+      reporttype = '14:Help report';
+      break;
+    case (15):
+      reporttype = '15:Low battery alarm report';
+      break;     
+    case (17):
+      reporttype = '17:Power on (temperature)';
+      break;     
+    case (19):
+      reporttype = '19:Power off (low battery)';
+      break;     
+    case (20):
+      reporttype = '20:Power off (temperature)';
+      break;
+    case (24):
+      reporttype = '24:Fall advisory report';
+      break;
+    case (26):
+      reporttype = '26: Exit from the secure zone';
+      break;
+    case (27):
+      reporttype = '27:Fpending report';
+      break;
+    default:
+      reporttype='';
+  }
+ 
+  var lat = (parseInt(((bytes[3]<<24)|(bytes[4]<<16)|(bytes[5]<<8)|bytes[6]),10))*0.000001;
+  var long = (parseInt(((bytes[7]<<24)|(bytes[8]<<16)|(bytes[9]<<8)|bytes[10]),10))*0.000001;
+  // if (port === 1) decoded.led = bytes[0];
+ 
+  return {
+    app_id:'uniud-track-id',
+    dev_id:'gpstracker20',
+    hardware_serial:'A840410001819108',
+    battery: battery,
+    reporttype: reporttype,
+    gpsfixstatus: gpsfixstatus,
+    latitude: lat,
+    longitude: long
+ }
+}
