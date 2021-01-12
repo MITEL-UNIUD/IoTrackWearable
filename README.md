@@ -41,18 +41,8 @@ This is the payload:
 ## References
 <a id="1">[1]</a> 
 
-Minati Veronica. 
-
-Analisi dei dati raccolti su una simulazione di cadute. 
-
-Relazione tecnica,
-
-Università degli Studi di Udine, Via delle Scienze, 206, 33100 Udine UD.
+Minati Veronica.  Analisi dei dati raccolti su una simulazione di cadute.  Relazione tecnica, Università degli Studi di Udine, 2018.
 
 <a id="2">[2]</a> 
 
-Dongha Lim, Chulho Park, Nam Kim, Sang-Hoon Kim, e Yun Seop Yu. 
-
-Fall-detection algorithm using 3-axis acceleration: Combination with simple threshold and hidden markov model. 
-
-Journal of Applied Mathematics, 2014, 09 2014.s
+Dongha Lim, Chulho Park, Nam Kim, Sang-Hoon Kim, Yun Seop Yu. [Fall-detection algorithm using 3-axis acceleration: Combination with simple threshold and hidden markov model.](https://www.hindawi.com/journals/jam/2014/896030/) Journal of Applied Mathematics, 2014, 09 2014.s
